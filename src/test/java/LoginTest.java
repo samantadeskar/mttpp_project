@@ -17,12 +17,12 @@ public class LoginTest {
     public void setUp() throws MalformedURLException {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("app", "D:\\MTTPP_Projekt\\app-release.apk");
-        capabilities.setCapability("VERSION", "10.0");
-        capabilities.setCapability("deviceName", "emulator");
-        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("app", Constants.apk);
+        capabilities.setCapability("VERSION", Constants.version);
+        capabilities.setCapability("deviceName", Constants.deviceName);
+        capabilities.setCapability("platformName", Constants.platformName);
 
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver(new URL(Constants.url), capabilities);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 
     }

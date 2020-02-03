@@ -9,7 +9,16 @@
 
     <test name="CaloriesTest">
         <classes>
-            <class name="CaloriesTest"></class>
+            <class name="CaloriesTest"/>
         </classes>
+    </test>
+
+    <test name="TrainingTest">
+        <classes>
+            <class name="TrainingTest"/>
+
+        </classes>
+
+
     </test>
 </suite>

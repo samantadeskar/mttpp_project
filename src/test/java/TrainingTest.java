@@ -9,7 +9,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class CaloriesTest {
+public class TrainingTest {
 
     AndroidDriver driver;
 
@@ -45,60 +45,43 @@ public class CaloriesTest {
 
     }
 
-    //enter calories
     @Test
-    public void enterCalories() {
+    public void trainingTest() {
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        MobileElement trainingTab = (MobileElement)
+                driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Training\"]/android.widget.TextView"));
+        trainingTab.click();
+
         MobileElement fab = (MobileElement)
-                driver.findElement(By.id("fabButtonCalories"));
+                driver.findElement(By.id("fabButtonTraining"));
         fab.click();
 
-        MobileElement search = (MobileElement)
-                driver.findElement(By.id("button_searchIngredients"));
-        search.click();
-
-        MobileElement ingredient = (MobileElement)
-                driver.findElement(By.id("editText_enterIngredient"));
-        ingredient.click();
-        ingredient.setValue(Constants.ingredient);
-
-        MobileElement searchIngredient = (MobileElement)
-                driver.findElement(By.id("button_search"));
-        searchIngredient.click();
-
-        MobileElement measurement = (MobileElement)
-                driver.findElement(By.id("editText_measurement"));
-        measurement.click();
-        measurement.setValue(Constants.measurement);
-
-        MobileElement addIngredient = (MobileElement)
-                driver.findElement(By.id("button_addIngredient"));
-        addIngredient.click();
-
-        MobileElement saveIngredients = (MobileElement)
-                driver.findElement(By.id("button_saveEntry"));
-        saveIngredients.click();
-
         MobileElement day = (MobileElement)
-                driver.findElement(By.id("editText_dayCalories"));
+                driver.findElement(By.id("editText_day"));
         day.click();
         day.setValue(Constants.day);
 
         MobileElement month = (MobileElement)
-                driver.findElement(By.id("editText_monthCalories"));
+                driver.findElement(By.id("editText_month"));
         month.click();
         month.setValue(Constants.month);
 
         MobileElement year = (MobileElement)
-                driver.findElement(By.id("editText_yearCalories"));
+                driver.findElement(By.id("editText_year"));
         year.click();
         year.setValue(Constants.year);
+
+        MobileElement training = (MobileElement)
+                driver.findElement(By.id("editText_trainingDetails"));
+        training.click();
+        training.setValue(Constants.training);
 
         driver.hideKeyboard();
 
         MobileElement save = (MobileElement)
-                driver.findElement(By.id("fabButton_saveCalories"));
+                driver.findElement(By.id("fabButtonAddTraining"));
         save.click();
+
     }
-
-
 }
