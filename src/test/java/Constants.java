@@ -23,5 +23,6 @@ public class Constants {
     public static final String measurement = "200";
     public static final String training = "10 pushups, 10 squats, 30sec plan, 10 burpees";
     public static final String newUsername = "testing username";
+    public static final String calories = "56";
 
 }
