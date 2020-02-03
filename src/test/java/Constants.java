@@ -19,10 +19,9 @@ public class Constants {
     public static final String day = "1";
     public static final String month = "2";
     public static final String year = "2020";
-
     public static final String ingredient = "apple";
     public static final String measurement = "200";
-
     public static final String training = "10 pushups, 10 squats, 30sec plan, 10 burpees";
+    public static final String newUsername = "testing username";
 
 }

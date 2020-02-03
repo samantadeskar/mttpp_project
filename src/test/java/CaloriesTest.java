@@ -21,9 +21,8 @@ public class CaloriesTest {
         capabilities.setCapability("VERSION", Constants.version);
         capabilities.setCapability("deviceName", Constants.deviceName);
         capabilities.setCapability("platformName", Constants.platformName);
-
         driver = new AndroidDriver(new URL(Constants.url), capabilities);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         loginUser();
     }
 
@@ -98,6 +97,7 @@ public class CaloriesTest {
         MobileElement save = (MobileElement)
                 driver.findElement(By.id("fabButton_saveCalories"));
         save.click();
+        driver.quit();
     }
 
 

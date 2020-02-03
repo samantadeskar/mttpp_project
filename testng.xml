@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
 <suite name="AllTestsSuite">
+
     <test name="LoginTest">
         <classes>
             <class name="LoginTest"/>
@@ -16,9 +18,13 @@
     <test name="TrainingTest">
         <classes>
             <class name="TrainingTest"/>
-
         </classes>
-
-
     </test>
+
+    <test name="UsernameTest">
+        <classes>
+            <class name="UsernameTest"/>
+        </classes>
+    </test>
+
 </suite>

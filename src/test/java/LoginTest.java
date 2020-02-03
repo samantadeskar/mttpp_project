@@ -21,9 +21,8 @@ public class LoginTest {
         capabilities.setCapability("VERSION", Constants.version);
         capabilities.setCapability("deviceName", Constants.deviceName);
         capabilities.setCapability("platformName", Constants.platformName);
-
         driver = new AndroidDriver(new URL(Constants.url), capabilities);
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
     }
 
@@ -68,7 +67,7 @@ public class LoginTest {
     //try to login user with non registered email and password
     @Test
     public void wrongEmailLogin(){
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        //driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
         //login user
         MobileElement email = (MobileElement)
                 driver.findElement(By.id("editText_emailLogin"));
@@ -88,5 +87,6 @@ public class LoginTest {
         MobileElement loginLabel = (MobileElement)
                 driver.findElement(By.id("login_label"));
 
+        driver.quit();
     }
 }

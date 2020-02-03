@@ -1,6 +1,9 @@
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -9,7 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class TrainingTest {
+public class UsernameTest {
 
     AndroidDriver driver;
 
@@ -44,43 +47,32 @@ public class TrainingTest {
 
     }
 
+
+
     @Test
-    public void trainingTest() {
+    public void UsernameTest(){
 
-        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement trainingTab = (MobileElement)
-                driver.findElement(By.xpath("//androidx.appcompat.app.ActionBar.Tab[@content-desc=\"Training\"]/android.widget.TextView"));
-        trainingTab.click();
+        //driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
-        MobileElement fab = (MobileElement)
-                driver.findElement(By.id("fabButtonTraining"));
-        fab.click();
+        MobileElement profileTab = (MobileElement)
+                driver.findElementByAccessibilityId("My Profile");
+        profileTab.click();
 
-        MobileElement day = (MobileElement)
-                driver.findElement(By.id("editText_day"));
-        day.click();
-        day.setValue(Constants.day);
+        MobileElement edit = (MobileElement)
+                driver.findElement(By.id("imageButton_editUsername"));
+        edit.click();
 
-        MobileElement month = (MobileElement)
-                driver.findElement(By.id("editText_month"));
-        month.click();
-        month.setValue(Constants.month);
-
-        MobileElement year = (MobileElement)
-                driver.findElement(By.id("editText_year"));
-        year.click();
-        year.setValue(Constants.year);
-
-        MobileElement training = (MobileElement)
-                driver.findElement(By.id("editText_trainingDetails"));
-        training.click();
-        training.setValue(Constants.training);
-
-        driver.hideKeyboard();
+        MobileElement newUsername = (MobileElement)
+                driver.findElement(By.id("editText_usernameProfile"));
+        newUsername.click();
+        newUsername.clear();
+        newUsername.setValue(Constants.newUsername);
 
         MobileElement save = (MobileElement)
-                driver.findElement(By.id("fabButtonAddTraining"));
+                driver.findElement(By.id("imageButton_saveUsername"));
         save.click();
         driver.quit();
+
     }
+
 }
