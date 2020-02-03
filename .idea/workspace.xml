@@ -42,6 +42,23 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="D:/MTTPP_Projekt/mttpp_projekt/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="mttpp_projekt" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.D:/MTTPP_Projekt/mttpp_projekt/testng.xml" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -60,7 +77,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
