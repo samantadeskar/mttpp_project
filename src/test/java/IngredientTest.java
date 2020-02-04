@@ -58,7 +58,7 @@ public class IngredientTest {
                 driver.findElement(By.id("editText_enterIngredient"));
         ingredient.click();
         //change with every test
-        ingredient.setValue("badem");
+        ingredient.setValue("cookie");
 
         MobileElement searchIngredient = (MobileElement)
                 driver.findElement(By.id("button_search"));
